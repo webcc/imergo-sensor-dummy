@@ -10,7 +10,7 @@ Node module with an example of a concrete sensor implementation of the
 ## Install
 
 ```console
-npm install imergo-sensor-example
+npm install imergo-sensor-dummy
 ```
 
 ## Testing
