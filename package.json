@@ -1,7 +1,7 @@
 {
     "name": "imergo-sensor-dummy",
-    "description": "Node module with an example of a concrete sensor implementation of the Generic Sensor API from W3C.",
-    "version": "0.1.1",
+    "description": "Node module with an example of a void sensor implementation of the Generic Sensor API from W3C.",
+    "version": "0.1.0",
     "author": {
         "name": "Web Compliance Center",
         "email": "webcc@fit.fraunhofer.de"
@@ -9,7 +9,8 @@
     "dependencies": {
         "imergo-generic-sensor-api": "webcc/imergo-generic-sensor-api#dev",
         "imergo-sensor-base": "webcc/imergo-sensor-base#dev",
-        "imergo-om-base": "webcc/imergo-om-base#dev"
+        "imergo-logger": "4.0.0",
+        "imergo-om-base": "4.1.1"
     },
     "devDependencies": {
         "mocha": "*"
@@ -21,7 +22,7 @@
         "url": "https://github.com/webcc/imergo-sensor-dummy.git"
     },
     "engines": {
-        "node": ">=6.9.1"
+        "node": ">=6.9.2"
     },
     "scripts": {
         "test": "mocha -R spec -t 15000 test/*"

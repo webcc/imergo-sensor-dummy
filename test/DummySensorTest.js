@@ -1,6 +1,8 @@
 "use strict";
+
 const assert = require("assert");
 const model = require("..");
+
 describe("imergo-sensor-dummy::DummySensor", () =>
 {
     it("should init a sensor", () =>
@@ -12,10 +14,10 @@ describe("imergo-sensor-dummy::DummySensor", () =>
     {
         let sensor = new model.DummySensor();
         sensor.onchange = event => {
-            assert(event.reading.dummyValue > 0 && event.reading.dummyValue < 1);
             assert(event.reading.values.get("dummyValue") > 0 && event.reading.values.get("dummyValue") < 1);
+            sensor.stop();
             done();
-        }
+        };
         sensor.start();
     });
 });
