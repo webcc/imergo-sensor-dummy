@@ -25,6 +25,6 @@
         "node": ">=6.9.2"
     },
     "scripts": {
-        "test": "mocha -R spec -t 15000 test/*"
+        "test": "mocha -R spec -t 5000 test/*"
     }
 }

@@ -7,12 +7,15 @@ describe("imergo-sensor-dummy::DummySensor", () =>
 {
     it("should init a sensor", () =>
     {
-        let sensor = new model.DummySensor();
-        assert.equal(sensor instanceof model.DummySensor, true);
+        const sensor = new model.DummySensor({ "frequency": 1000 });
+        assert(sensor instanceof model.DummySensor);
+        assert.strictEqual(sensor.name, "Dummy Sensor");
+        assert.strictEqual(sensor.type, "DummySensor");
+        assert.strictEqual(sensor.moduleName, "imergo-sensor-dummy");
     });
     it("should return random values", done =>
     {
-        let sensor = new model.DummySensor();
+        let sensor = new model.DummySensor({ "frequency": 1000 });
         sensor.onchange = event => {
             assert(event.reading.values.get("dummyValue") > 0 && event.reading.values.get("dummyValue") < 1);
             sensor.stop();
